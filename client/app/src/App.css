@@ -1,42 +1,201 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* App Container */
+.app-container {
+  width: 90%;
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.app-title {
   text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Form */
+.form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-field {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.input-field:focus {
+  border-color: blue;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 255, 0.3);
 }
 
-.card {
-  padding: 2em;
+/* Buttons */
+.add-btn,
+.update-btn,
+.cancel-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
 }
 
-.read-the-docs {
-  color: #888;
+.add-btn {
+  background: blue;
+  color: white;
+}
+
+.add-btn:hover {
+  background: darkblue;
+}
+
+.update-btn {
+  background: green;
+  color: white;
+}
+
+.update-btn:hover {
+  background: darkgreen;
+}
+
+.cancel-btn {
+  background: gray;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: darkgray;
+}
+
+/* Book List */
+.book-list {
+  margin-top: 10px;
+}
+
+.book-item {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  transition: 0.3s;
+}
+
+.book-item:hover {
+  background: #f8f9fa;
+}
+
+.book-item h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.book-item p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: gray;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit-btn {
+  color: green;
+}
+
+.edit-btn:hover {
+  color: darkgreen;
+}
+
+.delete-btn {
+  color: red;
+}
+
+.delete-btn:hover {
+  color: darkred;
+}
+
+/* Delete Confirmation */
+.confirm-popup {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.confirm-popup p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.confirm-yes,
+.confirm-no {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+.confirm-yes {
+  background: red;
+  color: white;
+}
+
+.confirm-yes:hover {
+  background: darkred;
+}
+
+.confirm-no {
+  background: gray;
+  color: white;
+}
+
+.confirm-no:hover {
+  background: darkgray;
 }
